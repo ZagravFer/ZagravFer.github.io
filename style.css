@@ -229,6 +229,12 @@ nav.tabs a:hover:not(.active){ color:var(--wine); }
   max-width:46ch;
   margin-bottom:34px;
 }
+@media (max-width:860px){
+  .hero{ padding:52px 0 64px; }
+  .hero .wrap{ grid-template-columns:1fr; gap:44px; }
+  .hero-photo{ max-width:360px; margin:0 auto; }
+  .hero h1{ font-size:clamp(30px,7vw,40px); }
+}
 .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
 
 .btn{
@@ -550,6 +556,10 @@ hr.rule{
 .step p{ font-size:14.5px; }
 
 /* ---------------- forms ---------------- */
+.split-grid{ display:grid; grid-template-columns:1fr 1fr; }
+@media (max-width:860px){ .split-grid{ grid-template-columns:1fr; gap:40px !important; } }
+@media (max-width:700px){ .two-col{ grid-template-columns:1fr !important; } }
+
 .form-panel{
   background:var(--paper-deep);
   border:1px solid var(--paper-line);
